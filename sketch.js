@@ -21,12 +21,12 @@ function setup() {
 //wid=800
 rad=40
 	//Create the Bodies Here.
-	R=new Roof(width/3,height/7,width/3,20)
-    B1=new Bob(R.width/2,height/4,rad)
-//	B2=new Bob(700,150,50);
-//	B3=new Bob(800,200,50);
-//	B4=new Bob(800,200,50);
-//	B5=new Bob(800,200,50);
+	R=new Roof(600,200,200,20)
+    B1=new Bob(605,370,rad)
+  	B2=new Bob(510,370,rad);
+  	B3=new Bob(555,370,rad);
+  	B4=new Bob(655,370,rad);
+    B5=new Bob(700,370,rad);
 console.log(R.x)
 	Engine.run(engine);
   
@@ -34,7 +34,7 @@ console.log(R.x)
 
 
 function draw() {
-  background("black");
+  background("red");
   R.display();
   B1.display();
   B2.display();

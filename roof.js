@@ -1,18 +1,30 @@
 class Roof
 {
-    constructor(x,y,w,h){
-    var O2={isStatic:true}
-    this.body=Bodies.rectangle(x,y,w,h,O2);
-    this.x=x;
-    this.y=y;
-    this.widht=w;
-    this.height=h;
-    World.add(world,this.body);
+	constructor(x,y,w,h)
+	{
+		var options={
+			isStatic:true			
+			}
+		this.x=x;
+		this.y=y;
+		this.w=w
+		this.h=h
+		this.body=Bodies.rectangle(x, y, w, h , options);
+ 		World.add(world, this.body);
 
-    }
-    display()
-    {
-        fill("yellow")
-        rect(this.x,this.y,this.widht,this.height);
+	}
+	display()
+	{
+			
+			var groundPos=this.body.position;		
+
+			push()
+			translate(groundPos.x, groundPos.y);
+			rectMode(CENTER)
+			//strokeWeight(4);
+			fill("yellow")
+			rect(0,0,this.w, this.h);
+			pop()
+			
     }
 };
